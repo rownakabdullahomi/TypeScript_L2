@@ -26,5 +26,12 @@
 
     // Rest operator
 
+    const greetFriends = (...friends: string[])=>{
+        // console.log(`hi ${friend1, friend2, friend3 }`);
+        friends.forEach((friend: string) => {
+            console.log(`Hi ${friend}`);
+        })
+    }
+    greetFriends("Abul", "Kabul", "Babul", "ubul", "habul")
 
 }
