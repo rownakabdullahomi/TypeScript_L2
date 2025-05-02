@@ -43,7 +43,14 @@ interface Roll2 {
 const rollNumbers1: Roll1 = [12, 34, 76];
 const rollNumbers2: Roll2 = [32, 47, 89, 40];
 
+type Add1 = (num1: number, num2: number) => number;
 
+interface Add2 {
+    (num1: number, num2: number): number
+}
+
+const add: Add1 = (num1, num2) => num1+num2;
+const add2: Add2 = (num1, num2) => num1+num2;
 
 
 
