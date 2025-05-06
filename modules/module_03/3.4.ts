@@ -31,11 +31,22 @@ class Cat extends Animal{
     }
 }
 
+
+// smart way
+const isDog = (animal : Animal) : animal is Dog => {
+    return animal instanceof Dog;
+}
+const isCat = (animal : Animal) : animal is Cat => {
+    return animal instanceof Cat;
+}
+
+
+
 const getAnimal = (animal : Animal) => {
-    if(animal instanceof Dog){
+    if(isDog(animal)){
         animal.makeBark();
     }
-    if(animal instanceof Cat){
+    if(isCat(animal)){
         animal.makeMeaw();
     }
 }
@@ -43,7 +54,8 @@ const getAnimal = (animal : Animal) => {
 const dog = new Dog("dog", "dog")
 const cat = new Cat("cat", "cat")
 
-
+getAnimal(dog);
+getAnimal(cat);
 
 
 
