@@ -26,5 +26,29 @@
     move(): void {
         console.log(`I am moving`);
     }
+    test(){
+        console.log(`I am testing`);
+    }
   }
+
+  const toyotaCar = new Car();
+  toyotaCar.startEngine();
+  toyotaCar.stopEngine();
+  toyotaCar.move();
+  toyotaCar.test();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
